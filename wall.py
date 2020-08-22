@@ -26,15 +26,11 @@ def change_wallpaper():
 	ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, wallpaper , 0) # add the path  here as well
 
 def main():
+	print('Your wallpaper will be downloaded and applied ')
 	try:
-		while True:
-			change_wallpaper()
-			time.sleep(1000)
-
-	except KeyboardInterrupt:
-		print("\nHope you like this one! Quitting.")
-	except Exception as e:
-		pass
-
+		change_wallpaper()
+		print('Made by Tushar Agrawal')
+	except e:
+		print(e)
 if __name__ == "__main__":
 	main()
